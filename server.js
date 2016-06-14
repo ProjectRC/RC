@@ -1866,19 +1866,21 @@ app.get('/reset', function(req,res) {
 
 //        ------------------------------JSON--------------------------
 app.get('/api/cercaCitta', function(req, res){
+  var url_parts = require('url').parse(req.url, true);
   
-  var citta = req.body.citta;
+
+  var citta = url_parts.query.citta;
   myFirebaseRef.child('offerte')
   .once('value', function(snap){
   	snap.forEach(function(childsnap){
   	  var data = childsnap.exportVal();
   	  if(data.citta == citta){
-  	      /*var result = {
+  	      var result = {
 			      result: 'success',
 		    	  message: data
 		    };
-		    res.json(result);*/
-		    send_success(res, {message : data});
+		    res.json(result);
+		    
   	  }
   	});
   });
@@ -1886,8 +1888,10 @@ app.get('/api/cercaCitta', function(req, res){
 
 
 app.get('/api/cercaProvincia', function(req, res){
+  var url_parts = require('url').parse(req.url, true);
   
-  var provincia = req.body.provincia;
+
+  var provincia= url_parts.query.provincia;
   myFirebaseRef.child('offerte')
   .once('value', function(snap){
   	snap.forEach(function(childsnap){
@@ -1905,12 +1909,15 @@ app.get('/api/cercaProvincia', function(req, res){
 
 
 app.get('/api/cercaUtente', function(req, res){
-  var utente = name + " " + surname;
+  var url_parts = require('url').parse(req.url, true);
+  
+
+  var utente = url_parts.query.nome + " " + url_parts.query.cognome;
   myFirebaseRef.child('offerte')
   .once('value', function(snap){
   	snap.forEach(function(childsnap){
   	  var data = childsnap.exportVal();
-  	  if(data.utente == utente){
+  	  if(data.username == utente){
   	    var result = {
 			    result: 'success',
 		    	message: data
@@ -1923,7 +1930,10 @@ app.get('/api/cercaUtente', function(req, res){
 
 
 app.get('/api/cercaTitolo', function(req, res){
-  var titolo = req.body.titolo;
+  var url_parts = require('url').parse(req.url, true);
+  
+
+  var titolo= url_parts.query.titolo;
   myFirebaseRef.child('offerte')
   .once('value', function(snap){
   	snap.forEach(function(childsnap){
@@ -1941,7 +1951,10 @@ app.get('/api/cercaTitolo', function(req, res){
 
 
 app.get('/api/cercaCategoria', function(req, res){
-  var categoria = req.body.categoria;
+  var url_parts = require('url').parse(req.url, true);
+  
+
+  var categoria= url_parts.query.categoria;
   myFirebaseRef.child('offerte')
   .once('value', function(snap){
   	snap.forEach(function(childsnap){
@@ -1962,6 +1975,9 @@ app.post('/api/inserisciOfferta', function(req, res) {
     var titolo = req.body.titolo;
     var testo = req.body.testo;
     var categoria = req.body.categoria;
+    var name=req.body.nome;
+    var surname= req.body.cognome
+    
     var nome = name + " " + surname; // ho cambiuato qui
     var email = req.body.email;
     var citta =req.body.citta;
@@ -1987,7 +2003,7 @@ app.post('/api/inserisciOfferta', function(req, res) {
 
 
 app.post('/api/cancella', function(req,res){
-  var chiave= req.param('chiave');
+  var chiave= req.body.chiave;
   var fireCanc=new  Firebase("https://progetto-reti.firebaseio.com/offerte/" + chiave);
   var onComplete = function(error) {
   if (error) {
@@ -2008,7 +2024,7 @@ app.post('/api/cancella', function(req,res){
   };
   fireCanc.remove(onComplete);
 });
-
+/*
 app.post('/api/sottoscriviCategoria', function(req,res){
   global_category = req.body.categoria;
   var result = {
@@ -2073,19 +2089,6 @@ app.post('/api/inserisciOffertaConCategoria', function(req, res) {			//inserimen
 		    	offerta: off
     };
 		res.json(result);
-});
+});*/
 
 
-// Lascio qualche funzione ausiliaria così evitiamo di riscrive troppe volte stesse cose
-
-function send_success(res, data) {
-  res.writeHead(200, {"Content-Type" : "application/json"});
-  var output = {error : null, data: data};
-  res.end(JSON.stringify(output) + "\n");
-}
-
-function send_failure(res, code, err){
-  var code = (err.code) ? err.code : err.name;
-  res.writeHead(code, {"Content-Type" : "application/json"});
-  res.end(JSON.stringify({error: code, message: err.message}) + "\n");
-}
