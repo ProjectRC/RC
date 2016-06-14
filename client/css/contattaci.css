@@ -1,0 +1,78 @@
+body {
+    background-color: #EEE;
+}
+
+#container {
+    background-color: white;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    clear: both;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    text-align: left;
+}
+
+#main {
+    background-color: white;
+    text-align: left;
+}
+
+#nome {
+    margin-top: 50px;
+    text-align: center;
+    /*margin-left: 264px;*/
+    text-transform: capitalize;
+}
+
+#cognome {
+    margin-top: 30px;
+    text-align: center;
+    /*margin-left: 195px;*/
+    text-transform: capitalize;
+}
+
+#testo {
+    margin-top: 30px;
+    /*margin-left: 200px;*/
+    text-align: center;
+}
+
+#telefono {
+    margin-top: 30px;
+    text-align: center;
+    /*margin-left: 293px;*/
+    text-transform: capitalize;
+}
+
+#email {
+    margin-top: 30px;
+    text-align: center;
+    /*margin-left: 299px;*/
+    text-transform: capitalize;
+}
+
+#antispam {
+    margin-top: 30px;
+    text-align: center;
+    /*margin-left: 269px;*/
+}
+
+#contatta {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+#footer {
+    margin-top: 100px;
+    clear: both;
+    padding: 10px;
+    background-color: #999999;
+    color: white;
+    text-align: left;
+}

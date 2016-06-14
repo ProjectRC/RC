@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Ricerca Titolo</title>
+        <link rel="stylesheet" type="text/css" href="css/home.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    </head> 
+    <body>
+        <div id="container">
+           
+            <div id="header">
+                <h1>&nbspJOBS</h1> 
+            </div>
+            
+            <div id="cerca-offri">
+                <a href="/OFFcerca.html"><img src="img/cercalavoro.jpg"  width="180" height="59" /></a>
+            </div>
+           
+            <div id="content">
+                
+                <div id="descrizione">
+                    <h1>Risultati ricerca per titolo</h1>
+                </div>
+                
+                <div id="utility">
+                    
+                    <div id="linkedin">
+                        <a href="/auth/linkedin"><img src="img/linkedin.png"  width="180" height="33" /></a>
+                    </div>
+                    
+                    <div id="twitter">                    
+                        <a href="/auth/twitter"><img src="img/twitter.png"  width="180" height="45" /></a>
+                    </div>
+
+                </div>
+                
+                <div id="pubblicita">
+                    <a href="https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjssia5t0e_dobxsL1yy9hiCv-anELdfgdEqamGAqFaxWRTNeHLO5gD04Zxru7hrRhlNPZz8h5RqrU3uF3rsiVO5k4s4tEJ5ZDifw1LpkNs48FXjU3sLpcZ2UXHlGHNfdbuxWxUGVZz5zh6gdYTkycjULC_lF%26sai%3DAMfl-YT2FBe23vVkHVWouHCa6CEbWqtERnFejQVwxFqekpziqvfbbDgr-E61ozF5gn89k5g23MthEBFJig%26sig%3DCg0ArKJSzEZQcxMwxq1jEAE%26urlfix%3D1%26adurl%3Dhttps://ad.atdmt.com/c/go;p=11087206405816;as=0;a=11087206405759;crs=11087206405738;cr=11087206405744;i.ts=1458830344" target="_blank"><img border="0" src="https://cdn.atlassbx.com/FB/11087206405744/01_03_300x250.jpg" /></a>
+                    <a href="http://adsl.html.it/compara-offerte/"><img src="http://adsl.html.it/img/box-facile-adsl-html.png" width="303" border="0"></a>                
+                    <a href="http://adserver.html.it/a.aspx?ZoneID=0&amp;BannerID=16372&amp;AdvertiserID=1214&amp;CampaignID=15809&amp;Task=Click&amp;SiteID=1&amp;RandomNumber=492172"><img src="http://cdn4.www.html.it/wp-content/uploads/2016/03/promobox-azure.jpg" width="300" border="0"></a>
+                    <a href="http://adserver.ikiweb.it/adman/adclick.php?s=1&amp;z=2&amp;a=340&amp;vai=http%3A%2F%2Fwww.hml.it%2Flink.php%3Fid%3D3" target="_blank"><img border="0" src="http://img.ikiweb.it/hml/server-300x250.jpg" alt="clicca qui!" style="display:block; width:300px; height:250px; margin: 0 auto;"></a> 
+                </div>
+                
+                <div id="homepage">
+                    
+                    <div id "annuncio1">
+
+                        <div id="contattaUtente">
+			                <ul id="contatta">
+				                <<li><form action = "/contattaUtente" method = "post">
+				                    <ul>
+						                <li><a href="#"><label>Username :  <%= username1 %></label></a></li>
+						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email1 %>></a></li>
+					                </ul>
+				                    <input type="image" name="image" src="img/contattaUtente.png">
+				                </form>
+				                </li>
+			                </ul>
+		                </div>
+		                
+                        <h2 class="titolo"> <%= titolo1 %> </h2>
+                        <p class="categoria"><b> <%= categoria1 %> </b><class="luogo"><label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta1 %></label> <label>(<%= provincia1 %>)</label></class></p>
+                        <p class="descrizione"> <%= testo1 %> </p>
+                    </div>
+
+                
+                    <div id "annuncio2">
+                        
+                        <div id="contattaUtente">
+			                <ul id="contatta">
+				                <li><form action = "/contattaUtente" method = "post">
+				                    <ul>
+						                <li><a href="#"><label>Username :  <%= username2 %></label></a></li>
+						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email2 %>></a></li>
+					                </ul>
+					                <input type="image" name="image" src="img/contattaUtente.png">
+				                </form>
+				                </li>
+			                </ul>
+		                </div>
+		                
+                        <h2 class="titolo"> <%= titolo2 %></h2>
+                        <p class="categoria"> <b><%= categoria2 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta2 %></label> <label>(<%= provincia2 %>)</label></p>
+                        <p class="descrizione"> <%= testo2 %> </p>
+                    </div>
+                
+                    <div id "annuncio3">
+                        <div id="contattaUtente">
+			                <ul id="contatta">
+				                <li><form action = "/contattaUtente" method = "post">
+				                    <ul>
+						                <li><a href="#"><label>Username :  <%= username3 %></label></a></li>
+						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email3 %>></a></li>
+					                </ul>
+					                <input type="image" name="image" src="img/contattaUtente.png">
+				                </form>
+				                </li>
+			                </ul>
+		                </div>
+		                
+                        <h2 class="titolo"> <%= titolo3 %></h2>
+                        <p class="categoria"> <b><%= categoria3 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta3 %></label> <label>(<%= provincia3 %>)</label></p>
+                        <p class="descrizione"> <%= testo3 %> </p>
+                    </div>
+                
+                    <div id "annuncio4">
+                        
+                        <div id="contattaUtente">
+			                <ul id="contatta">
+				                <li><form action = "/contattaUtente" method = "post">
+				                    <ul>
+						                <li><a href="#"><label>Username :  <%= username4 %></label></a></li>
+						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email4 %>></a></li>
+					                </ul>
+					                <input type="image" name="image" src="img/contattaUtente.png">
+				                </form>
+				                </li>
+			                </ul>
+		                </div>
+		                
+                        <h2 class="titolo"> <%= titolo4 %></h2>
+                        <p class="categoria"> <b><%= categoria4 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta4 %></label> <label>(<%= provincia4 %>)</label></p>
+                        <p class="descrizione"> <%= testo4 %> </p>
+                    </div>
+                
+                    <div id "annuncio5">
+                        
+                        <div id="contattaUtente">
+			                <ul id="contatta">
+				                <li><form action = "/contattaUtente" method = "post">
+				                    <ul>
+						                <li><a href="#"><label>Username :  <%= username5 %></label></a></li>
+						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email5 %>></a></li>
+					                </ul>
+					                <input type="image" name="image" src="img/contattaUtente.png">
+				                </form>
+				                </li>
+			                </ul>
+		                </div>
+		                
+                        <h2 class="titolo"> <%= titolo5 %></h2>
+                        <p class="categoria"> <b><%= categoria5 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta5 %></label> <label>(<%= provincia5 %>)</label></p>
+                        <p class="descrizione"> <%= testo5 %> </p>
+                    </div>
+                </div>
+            
+            </div>
+           
+            <div id="footer">
+                Copyright &copy; 2016 iBuso
+            </div>
+        </div>
+    </body>
+</html>

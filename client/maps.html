@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding service</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="server.js" type="text/javascript"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel"> 
+    
+      <input id="address" type="textbox" value = "Inserisci la città" >
+      <input id="submit" type="button" value="Find">
+    </div>
+    <div id="map"></div>
+    <script type="text/javascript">
+    
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: 41.9027835, lng: 12.4963655}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        
+       
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            resultsMap.setCenter(results[0].geometry.location);
+            
+            var contentString = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Mitra</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Job</b></p>'+
+              '<p>Attribution: Roma, Link all annuncio : <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+              'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+              '(last visited June 22, 2009).</p>'+
+              '</div>'+
+              '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+            
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location,
+              title: 'Work for Andrea'
+            });
+            
+            marker.addListener('click', function() {
+              infowindow.open(resultsMap, marker);
+            });
+            
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+  	      
+      }
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6EEJcXvJyxaY9wUg8iXzo2XPT2QwtHv8&callback=initMap">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+body {
+    background-color: #EEE;     
+}
+
+#container {
+    background-color: white;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+	width:1200px;
+	height: 90px;
+    clear: both;
+    background-color: red;
+    color: white;
+    text-align: left;
+}
+
+#pulsante {
+    text-align: left;
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+#cerca-offri {
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: right;
+    
+}
+
+#content {
+   text-align: center; 
+    
+}
+
+#descrizione {
+	text-align: left;
+	margin-left: 220px;
+}
+
+#utility {
+    margin-top: 30px;
+    text-align: center;
+    width: 200px;
+    float: left;
+}
+
+#linkedin {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#twitter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pubblicita {
+	text-align: right;
+	margin-right: 0px;
+	float:right;
+	width: 300px;
+}
+
+#homepage {
+    margin: 0px 0px 0px 95px;
+    width: 500px;
+    float: left;
+}
+
+#cancella {
+	text-align: right;
+	float: right;
+	
+}
+
+#annuncio1 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+    
+}
+
+.luogo{
+	margin-left:30px;
+	float:right;
+	
+}
+
+#annuncio2 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+  
+
+#annuncio3 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#annuncio4 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#annuncio5 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#footer {
+    margin-top: 1000px;
+    clear: both;
+    padding: 10px;
+    background-color: #999999;
+    color: white;
+    text-align: left;
+}
+
+.titolo{
+	text-align: left;
+    color: red;
+    padding-left: 10px;
+}
+
+.categoria{
+	text-align: left;
+    color: black;
+    padding-left: 10px;
+}
+
+.descrizione{
+	text-align: left;
+    padding-left: 20px;
+    padding-bottom: 10px;
+	border-bottom: 1px solid grey;
+}
+
+.chiave {
+	text-align: left;
+	padding-left: 10px;
+	
+}
+
+
+#drop-menu {
+
+	width: 960px; 
+}
+
+#menu {
+	margin:10px 10px 10px;
+	padding: 0;
+	list-style: none;
+	float:left;
+	width: 200px; 
+	background-color: #999999;
+	font-size:80%
+}
+
+#menu li {
+	margin:0;
+	padding:0;
+	float:left;
+	display: block;
+	border: 1px solid #222;
+	position: relative;
+	width: 198px;
+}
+
+#menu li a {
+	float: left;
+	padding:12px 3px;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration:none;
+}
+
+#menu li a:hover {
+	background: #666;
+	color:#fff
+}
+
+#menu ul {
+	margin:2px 0 0;
+	padding:0;
+	display:inline-block;
+	list-style: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 75px; 
+	left: 0;
+	z-index:9999;
+	background: #444;
+}
+
+#menu li:hover ul {
+	opacity: 1;
+	visibility: visible;
+}
+
+#menu ul li {
+	float: none;
+	display: block;
+	border: 0;
+}
+
+#menu ul a {
+/*	padding:10px;*/
+	width: 192px; /* era 130*/
+	display: block;
+	white-space: nowrap;
+	float: none;
+	text-transform: none;
+}
+
+#menu ul a:hover {
+	background-color: #0186ba;
+	color:#fff
+}
+
+#contattaUtente {
+	margin-right: 50px ;
+	padding: 0;
+	width: 500px;
+}
+
+#contatta {
+	/*margin:10px 10px 10px;*/
+	padding: 0;
+	list-style: none;
+	float:right;
+	width: 120px;
+	/*background-color: orange;*/
+	font-size:70%
+}
+
+#contatta li {
+	margin:0;
+	padding:0;
+	float:right;
+	display: block;
+	/*border: 1px solid #222;*/
+	position: relative;
+}
+
+#contatta li a {
+	float: right;
+	padding:12px 30px;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration:none;
+}
+
+#contatta li a:hover {
+	background: #666;
+	color: #fff;
+}
+
+#contatta ul {
+	margin:2px 0 0;
+	padding:0;
+	display:inline-block;
+	list-style: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	z-index:9999;
+	background: #444;
+}
+
+#contatta li:hover ul {
+	opacity: 1;
+	visibility: visible;
+}
+
+#contatta ul li {
+	float: none;
+	display: block;
+	border: 0;
+}
+
+#contatta ul a {
+	padding:10px;
+	width: 150px;
+	display: block;
+	white-space: nowrap;
+	float: none;
+	text-transform: none;
+}
+
+#contatta ul a:hover {
+	background-color: #0186ba;
+	color: #fff;
+}
+
+#notifiche {
+	margin-top: 20px;
+    float: left;
+}
+
+#notifica1 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#notifica2 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#notifica3 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#notifica4 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+#notifica5 {
+	text-align: left;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+}

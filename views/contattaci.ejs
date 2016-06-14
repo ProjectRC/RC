@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contatta l'offerente JOBS </title>
+        <link rel="stylesheet" type="text/css" href="css/contattaci.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    </head>
+    <body>
+    <form action="sendEmail" method="post" >
+        <div id="container">
+            <div id="header">
+                <h1>&nbspJOBS</h1>    
+            </div>
+            <div id="main">
+                
+                <style>input{text-transform:capitalize}</style>
+                <div id="nome">
+                    <label><b>Nome&nbsp</b></label>
+                    <input type="text" name="nome" autocomplete="on" size="20" maxlength="60" required/>
+                </div>
+                
+                <div id="cognome">
+                    <label><b>Cognome&nbsp</b></label>
+                    <input type="text" name="cognome" autocomplete="on" size="20" maxlength="60" required/>
+                </div>
+                
+                <div id="testo">
+                    <label><b>Descrizione&nbsp</b></label>
+                    <textarea name="testo" rows="5" cols="40" required /></textarea>
+                </div>
+                
+                <div id="telefono">
+                    <label><b>Numero di telefono&nbsp</b></label>
+                    <input type="tel" name="numero" autocomplete="on" size="20" maxlength="60" required pattern="[0-9]{7,10}"/>
+                </div>
+                
+                <div id="email">
+                    <label><b>E-mail&nbsp</b></label>
+                    <input type="email" name="email" autocomplete="on" placeholder="email@domain.ext" size="20" maxlength="60" required/>
+                </div>
+                
+                <fieldset id='antispam'>
+                <legend >Domanda Anti-spam </legend>
+                    <span class='short_explanation'>(Please answer the simple question below. This to prevent spam bots from submitting this form)</span>
+       
+                        <label>Qual è il colore dell'erba?</label>
+                        <input type='text' name='antispam'  maxlength="10" required pattern="[v]{1}[e]{1}[r]{1}[d]{1}[e]{1}" /><br/>
+                </fieldset>
+                
+                <div id="contatta">
+                    <input type="image"src="img/contatta.png" width="300" hight="99"border="0"/>
+                </div>
+                
+            </div>
+            
+            <div id="footer">
+                Copyright &copy; 2016 iBuso
+            </div>
+        </div>
+    </form>
+    </body>
+    
+</html>

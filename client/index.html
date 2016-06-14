@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome - JOBS </title>
+        <link rel="stylesheet" type="text/css" href="css/welcome.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    </head>
+    <body>
+        <div id="container">
+            
+            <div id="header">
+                <div id="welcome">
+                    <h1><b>Welcome to</b></h1>
+                </div>
+                <div id="image">
+                    <img src="img/job_mouse.jpg" /> 
+                </div>
+            </div>
+            
+            <div id="main">
+                
+                <script>
+                  window.fbAsyncInit = function() {
+                    FB.init({
+                      appId      : '1068349139904556',
+                      xfbml      : true,
+                      version    : 'v2.6'
+                    });
+                  };
+                
+                  (function(d, s, id){
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) {return;}
+                     js = d.createElement(s); js.id = id;
+                     js.src = "//connect.facebook.net/en_US/sdk.js";
+                     fjs.parentNode.insertBefore(js, fjs);
+                   }(document, 'script', 'facebook-jssdk'));
+                </script>
+                
+                <div class="fb-messengermessageus" 
+                  messenger_app_id="1068349139904556" 
+                  page_id="1763736573860186"
+                  color="blue"
+                  size="xlarge" >
+                </div>
+                
+                <div>
+                    <a href="/auth/linkedin"><img src="img/linkedin.png" /></a>
+                </div>
+                
+                <div>
+                    <p><a href="/auth/twitter"><img src="img/twitter.png" /></a></p>
+                </div>
+                
+                <script id="_wauip2">var _wau = _wau || [];
+                    _wau.push(["colored", "6w04o7zau84o", "ip2", "ffc20e000000"]);
+                    (function() {var s=document.createElement("script"); s.async=true;
+                    s.src="http://widgets.amung.us/colored.js";
+                    document.getElementsByTagName("head")[0].appendChild(s);
+                    })();
+                </script>
+                
+                
+                <p><h3>Or <form action='/OFFvisualizzaAnnuncio' method="get" >
+                            <input type="submit"  id='OFFvisualizzaAnnuncio' method="get" value="Continue">
+                        </form> without logging in</h3></p>
+                
+            </div>
+            
+            <div id="footer">
+                Copyright &copy; JOBS
+            </div>
+        </div>
+    </body>
+</html>

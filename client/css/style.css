@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3-gen-2016, 18.18.42
+    Author     : Stefano Casaluci
+*/
+
+/* Setto il colore di sfondo della pagina */
+
+#background {background-color:chocolate;}
+
+/*Determina le caratteristiche del blocco centrale della pagina. Lascio per ora il colore "whitesmoke" in modo da regolarmi su come
+è sistemato. Quando avrò fatto lo toglierò per rendere la pagina più bella : dovrà diventare transparent */
+
+#container { width:75%; height:100%; margin:0 auto; background-color: wheat;}
+
+/* Da rivedere il tipo e dimensione del font. Colore trasparente indica che lo eredita dal div genitore */
+/* L'header dovrà essere più alto */
+
+#header {font-family:verdana; text-align: center; background-color: greenyellow; }
+
+/* Blocco che conterrà i post più recenti. Contenuto all'interno del div "container", imposto la sua altezza a circa metà pagina*/
+
+#recently {background-color:white; margin-left: 75px; margin-right: 75px; height:auto;}
+
+#main {background-color: red;}
+
+#main .box{width:50%; float:left; }
+
+#footer {clear :left; background-color:transparent; text-align: center; height:30px;}

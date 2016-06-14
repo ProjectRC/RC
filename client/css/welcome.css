@@ -1,0 +1,46 @@
+body {
+    background-color: #EEE;     
+}
+
+#container {
+    background-color: white;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+#welcome {
+    padding-top: 20px;   
+    margin-top: 50px;
+    text-align: center;
+}
+
+#image {
+    text-align: center;
+}
+
+#main {
+    background-color: white;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.fb-messengermessageus{
+    margin-bottom: 10px;
+}
+
+#footer {
+    clear: both;
+    padding: 10px;
+    background-color: #999999;
+    color: white;
+    text-align: left;
+}
+

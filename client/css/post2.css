@@ -1,0 +1,84 @@
+body {
+    background-color: #EEE;
+}
+
+#container {
+    background-color: white;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    clear: both;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    text-align: left;
+}
+
+#main {
+    background-color: white;
+    text-align: left;
+}
+
+#categoria {
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 264px;
+    text-transform: capitalize;
+}
+
+#titolo {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 195px;
+    text-transform: capitalize;
+}
+
+#testo {
+    margin-top: 30px;
+    margin-left: 200px;
+    text-align: left;
+}
+
+#nome {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 293px;
+    text-transform: capitalize;
+}
+
+#citta {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 299px;
+    text-transform: capitalize;
+}
+
+#provincia {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 269px;
+}
+
+#email {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 287px;
+}
+
+#inserisci {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+#footer {
+    margin-top: 100px;
+    clear: both;
+    padding: 10px;
+    background-color: #999999;
+    color: white;
+    text-align: left;
+}

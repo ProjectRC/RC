@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Il tuo annuncio è stato inserito! </title>
+        <link rel="stylesheet" type="text/css" href="css/inserito.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    </head> 
+    <body>
+        <div id="container">
+           
+            <div id="header">
+                <h1>&nbspJOBS</h1> 
+            </div>
+           
+            <div id="inserito">
+                <h1>Il tuo annuncio è stato inserito il tuo codice è: <%= key %> !</h1>
+            </div>
+            
+            
+            
+            <div id="home-button">
+                <form action='visualizzaAnnuncioConCategoria' method="get" >
+                            <input type="submit"  id='visualizzaAnnuncio' method="get" value="Continue">
+                </form>
+            </div>
+            
+            
+           
+            <div id="footer">
+                Copyright &copy; 2016 JOBS
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+body {
+    background-color: #EEE;
+}
+
+#container {
+    background-color: white;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+	clear: both;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    text-align: left;
+	
+	/*width:1000px;
+	height: 90px;
+    clear: both;
+    background-color: red;
+    color: white;
+    text-align: left;*/
+}
+
+#pulsante {
+    text-align: left;
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+#main {
+    background-color: white;
+    text-align: left;
+}
+
+#categoria {
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 264px;
+}
+
+#titolo {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 195px;
+}
+
+#citta {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 299px;
+}
+
+#provincia {
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 269px;
+}
+
+#cerca {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+#maps {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#footer {
+    margin-top: 100px;
+    clear: both;
+    padding: 10px;
+    background-color: #999999;
+    color: white;
+    text-align: left;
+}

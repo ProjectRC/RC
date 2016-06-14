@@ -1,0 +1,62 @@
+
+<html>
+
+    <head>
+        <title>MioBlog</title>
+    </head>
+    
+    <body>
+        <h1>MioBlog: realizzato in PHP e MySQL</h1>
+    <?php
+    
+    // inclusione del file di classe
+    include "funzioni_mysql.php";
+    
+    // istanza della classe
+    $data = new MysqlClass();
+    
+    // chiamata alla funzione di connessione
+
+    $data->connetti();
+    
+    // query per l'estrazione dei record
+    $post_sql = $data->query("SELECT * FROM post ORDER BY data_post DESC");
+    
+    // controllo sul numero di records presenti in tabella
+    
+    if(mysql_num_rows($post_sql) > 0){
+    
+    // estrazione dei record tramite ciclo
+    
+    while($post_obj = $data->estrai($post_sql)){
+    $id_post = $post_obj->id_post;
+    $titolo_post = stripslashes($post_obj->titolo_post);
+    $testo_post = stripslashes($post_obj->testo_post);
+    $autore_post = stripslashes($post_obj->autore_post);
+    $data_post = $post_obj->data_post;
+        
+    // visualizzazione dei dati
+    echo "<h2>".$titolo_post."</h2>n";
+    echo  "Autore <b>". $autore_post . "</b>n";
+    echo  "<br />n";
+    echo  "Pubblicato il <b>" . $data->format_data($data_post) . "</b>n";
+    echo  "<br />n";
+    
+    // collegamento al testo completo del post
+    $leggi_tutto = "<br /><a href="post.php?id_post=$id_post">Articolo completo</a>n";
+    
+    // anteprima del testo
+     
+    echo "<p>".$data->preview($testo_post, 50, $leggi_tutto)."</p>n"; 
+    echo "<hr>n";
+  } 
+    }
+    else{
+      // notifica in assenza di record in tabella
+      echo "Per il momento non sono disponibili post.";
+    }
+    // chiusura della connessione a MySQL
+    $data->disconnetti();
+    ?>
+    </body>
+</html>

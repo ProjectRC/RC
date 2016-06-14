@@ -1,0 +1,17 @@
+                    WALL OF JOBS
+                    
+    Descrizione:
+    Un sito web dove offrire e cercare lavoro in modo semplice e diretto.
+    Il nostro servizio permette, a chiunque, tramite un semplice accesso a 
+    linkedin  di poter postare offerte di lavoro, rendendole visibili a chiunque
+    visualizzi il nostro sito. Offriamo diverse funzionalità di ricerca per gli annunci
+    e la possibilità di collegarsi tramite twitter e poter pubblicare la propria offerta.
+    
+    Informazioni tecniche:
+    I linguaggi utilizzati sono Javascript ed Html(Css incluso). Per lo sviluppo sono stati 
+    utilizzati moduli come nodeJs e OAuth
+    Come database online è stato utilizzato Firebase. 
+    Per i servizi di notifica asincrona è stato utilizzato RabbitMQ.
+    Sono presenti due implementazioni di servizi OAuth per Twitter e Linkedin di cui sono state utilizzate 
+    le api per ricevere informazioni o poter pubblicare.
+    Sono state utilizzate api di siti commerciali come Twitter Linkedin e Google Maps
