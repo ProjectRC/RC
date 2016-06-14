@@ -1352,21 +1352,21 @@ app.get('/cercaUtente', function(req, res){
   	  res.render('ricercaEmpty');
   	}
   	if(matrice[1][0] === ""){
-  	  res.render('OFFvisualizzaAnnunci1', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6]});
+  	  res.render('annunciUtente1', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6]});
   	}
   	if(matrice[2][0] === ""){
-  	  res.render('OFFvisualizzaAnnunci2', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6],
+  	  res.render('annunciUtente2', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6],
   	                                       categoria2 : matrice[1][0] , citta2 : matrice[1][1], email2 : matrice[1][2] , provincia2 : matrice[1][3] , testo2 : matrice[1][4], titolo2 : matrice[1][5] , username2 : matrice[1][6]
   	  });
   	}
   	if(matrice[3][0] === ""){
-  	  res.render('OFFvisualizzaAnnunci3', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6], 
+  	  res.render('annunciUtente3', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6], 
   	                                       categoria2 : matrice[1][0] , citta2 : matrice[1][1], email2 : matrice[1][2] , provincia2 : matrice[1][3] , testo2 : matrice[1][4], titolo2 : matrice[1][5] , username2 : matrice[1][6],  
   		                                     categoria3 : matrice[2][0] , citta3 : matrice[2][1], email3 : matrice[2][2] , provincia3 : matrice[2][3] , testo3 : matrice[2][4], titolo3 : matrice[2][5] , username3 : matrice[2][6],
   	  });
   	}
   	if(matrice[4][0] === ""){
-  	  res.render('OFFvisualizzaAnnunci4', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6], 
+  	  res.render('annunciUtente4', {categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6], 
   	                                       categoria2 : matrice[1][0] , citta2 : matrice[1][1], email2 : matrice[1][2] , provincia2 : matrice[1][3] , testo2 : matrice[1][4], titolo2 : matrice[1][5] , username2 : matrice[1][6],  
   		                                     categoria3 : matrice[2][0] , citta3 : matrice[2][1], email3 : matrice[2][2] , provincia3 : matrice[2][3] , testo3 : matrice[2][4], titolo3 : matrice[2][5] , username3 : matrice[2][6],
   		                                     categoria4 : matrice[3][0] , citta4 : matrice[3][1], email4 : matrice[3][2] , provincia4 : matrice[3][3] , testo4 : matrice[3][4], titolo4 : matrice[3][5] , username4 : matrice[3][6]

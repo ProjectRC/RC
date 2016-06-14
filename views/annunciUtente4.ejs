@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html>
    <head>
-        <title>Ricerca Città</title>
-        <link rel="stylesheet" type="text/css" href="css/home.css" />
+        <title>Annunci Utente</title>
+        <link rel="stylesheet" type="text/css" href="css/annunciUtente.css" />
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     </head> 
     <body>
         <div id="container">
            
             <div id="header">
-                <h1>&nbspJOBS</h1> 
+                <div id="pulsante">
+                    <a href="/visualizzaAnnuncio"><img src="img/jobs.png"/>
+                </div> 
             </div>
             
+            <div id="drop-menu">
+                
+			    <ul id="menu">
+				    <li><img src="<%= Img %>" width="50" height="50"/> &nbsp <a href="/index.html"><%= name %> <%= surname %></a> 
+				        
+				        <ul>
+						    <li><a href="/cercaUtente">I miei annunci</a></li>
+						    <li><a href="/logoutLinkedin">Esci</a></li>
+					    </ul>
+				    </li>
+			    </ul>
+		    </div>
+            
             <div id="cerca-offri">
-                <a href="/cerca.html"><img src="img/cercalavoro.jpg"  width="180" height="59" /></a>
+                <a href="/cerca.html"><img src="img/cercalavoro.jpg"  width="180" height="59" /></a> &nbsp <a href="/post2.html"><img src="img/offrilavoro.jpg"  width="180" height="59" ></a>
             </div>
            
             <div id="content">
                 
                 <div id="descrizione">
-                    <h1>Risultati ricerca per città</h1>
+                    <h1>Risultati ricerca per annunci utente</h1>
                 </div>
                 
                 <div id="utility">
-                    
-                    <div id="linkedin">
-                        <a href="/auth/linkedin"><img src="img/linkedin.png"  width="180" height="33" /></a>
-                    </div>
                     
                     <div id="twitter">                    
                         <a href="/auth/twitter"><img src="img/twitter.png"  width="180" height="45" /></a>
@@ -44,103 +55,57 @@
                 <div id="homepage">
                     
                     <div id "annuncio1">
-
-                        <div id="contattaUtente">
-			                <ul id="contatta">
-				                <li><form action = "/contattaUtente" method = "post">
-				                    <ul>
-						                <li><a href="#"><label>Username :  <%= username1 %></label></a></li>
-						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email1 %>></a></li>
-					                </ul>
-				                    <input type="image" name="image" src="img/contattaUtente.png">
-				                </form>
-				                </li>
-			                </ul>
+                        
+                        <div id="cancella">
+                            <a href="/cancella.html"><img src="img/delete.png"/></a>
+                            <!-- <input type="image"  src="img/delete.png" onclick="window.prompt('Inserisci la chiave: ','')" /> --->
 		                </div>
 		                
                         <h2 class="titolo"> <%= titolo1 %> </h2>
                         <p class="categoria"><b> <%= categoria1 %> </b><class="luogo"><label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta1 %></label> <label>(<%= provincia1 %>)</label></class></p>
                         <p class="descrizione"> <%= testo1 %> </p>
+                        <p class="chiave">Chiave: <%= key1 %> </p>
+  
                     </div>
 
                 
-                    <div id "annuncio2">
+                <div id "annuncio2">
                         
-                        <div id="contattaUtente">
-			                <ul id="contatta">
-				                <li><form action = "/contattaUtente" method = "post">
-				                    <ul>
-						                <li><a href="#"><label>Username :  <%= username2 %></label></a></li>
-						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email2 %>></a></li>
-					                </ul>
-					                <input type="image" name="image" src="img/contattaUtente.png">
-				                </form>
-				                </li>
-			                </ul>
+                        <div id="cancella">
+                            <a href="/cancella.html"><img src="img/delete.png"/></a>
 		                </div>
 		                
                         <h2 class="titolo"> <%= titolo2 %></h2>
                         <p class="categoria"> <b><%= categoria2 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta2 %></label> <label>(<%= provincia2 %>)</label></p>
                         <p class="descrizione"> <%= testo2 %> </p>
+                        <p class="chiave">Chiave: <%= key2 %> </p>
+                    
                     </div>
                 
                     <div id "annuncio3">
-                        <div id="contattaUtente">
-			                <ul id="contatta">
-				                <li><form action = "/contattaUtente" method = "post">
-				                    <ul>
-						                <li><a href="#"><label>Username :  <%= username3 %></label></a></li>
-						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email3 %>></a></li>
-					                </ul>
-					                <input type="image" name="image" src="img/contattaUtente.png">
-				                </form>
-				                </li>
-			                </ul>
+                        
+                        <div id="cancella">
+                            <a href="/cancella.html"><img src="img/delete.png"/></a>
 		                </div>
 		                
                         <h2 class="titolo"> <%= titolo3 %></h2>
                         <p class="categoria"> <b><%= categoria3 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta3 %></label> <label>(<%= provincia3 %>)</label></p>
                         <p class="descrizione"> <%= testo3 %> </p>
+                        <p class="chiave">Chiave: <%= key3 %> </p>
+                    
                     </div>
                 
                     <div id "annuncio4">
                         
-                        <div id="contattaUtente">
-			                <ul id="contatta">
-				                <li><form action = "/contattaUtente" method = "post">
-				                    <ul>
-						                <li><a href="#"><label>Username :  <%= username4 %></label></a></li>
-						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email4 %>></a></li>
-					                </ul>
-					                <input type="image" name="image" src="img/contattaUtente.png">
-				                </form>
-				                </li>
-			                </ul>
+                        <div id="cancella">
+                            <a href="/cancella.html"><img src="img/delete.png"/></a>
 		                </div>
 		                
                         <h2 class="titolo"> <%= titolo4 %></h2>
                         <p class="categoria"> <b><%= categoria4 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta4 %></label> <label>(<%= provincia4 %>)</label></p>
                         <p class="descrizione"> <%= testo4 %> </p>
-                    </div>
-                
-                    <div id "annuncio5">
-                        
-                        <div id="contattaUtente">
-			                <ul id="contatta">
-				                <li><form action = "/contattaUtente" method = "post">
-				                    <ul>
-						                <li><a href="#"><label>Username :  <%= username5 %></label></a></li>
-						                <li><a href="#"><label>Email : </label><input type="text" name="email" value= <%= email5 %>></a></li>
-					                </ul>
-					                <input type="image" name="image" src="img/contattaUtente.png">
-				                </form>
-				                </li>
-			                </ul>
-		                </div>
-		                
-                        <h2 class="titolo"> <%= titolo5 %></h2>
-                        <p class="categoria"> <b><%= categoria5 %></b> <label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= citta5 %></label> <label>(<%= provincia5 %>)</label></p>
-                        <p class="descrizione"> <%= testo5 %> </p>
+                        <p class="chiave">Chiave: <%= key4 %> </p>
+                    
                     </div>
                 </div>
             
