@@ -676,7 +676,7 @@ app.post('/inserisciOfferta', function(req, res) {			//inserimento offerta di la
     res.render('inserito', {key : key });
    
     var notifica = new Array(titolo, testo, categoria, nome, email, citta, provincia);
-    //riempi_array(global_array,notifica);
+
     notification(notifica);
    
     console.log("post received: %s %s %s %s %s %s %s",titolo, testo, categoria, nome, email, citta, provincia, post_id.key());
@@ -1653,11 +1653,11 @@ app.get('/visualizzaNotificaPerCategoria', function(req,res){
     global_array=array_altro;
     global_num = num_altro;
   }
-  
   var connection = amqp.createConnection({host: 'localhost'});
   //console.log(global_category);
   //console.log(global_num);
   //console.log(global_array);
+  console.log("Received Message : " + global_array);
   var queueToReceiveFrom = global_category;
   connection.on('ready', function(){
 		connection.queue(queueToReceiveFrom, {autoDelete: false}, function(queue){
