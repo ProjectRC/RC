@@ -248,8 +248,8 @@ function sendGenericMessage(sender) {
 var consumerKey =  KEYS.cons_key_twitter;
 var consumerSecret =  KEYS.cons_secret_twitter;
 
-var accessToken = '708600803012026368-8c34K0o40VgvnazKeXApsme8Ir5lOWD';
-var accessTokenSecret = 'F6NfcChgVfJFQ1Fd8TXBHlZnoLbkPgaGiT1YCbg054qkX';
+var accessToken = '';
+var accessTokenSecret = '';
                           
 var oauth = new OAuth(
   'https://api.twitter.com/oauth/request_token',
