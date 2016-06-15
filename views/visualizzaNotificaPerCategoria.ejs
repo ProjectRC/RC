@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-        <title>ultimi annunci </title>
+        <title>Ultime notifiche </title>
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     </head> 
@@ -29,16 +29,12 @@
             <div id="cerca-offri">
                 <a href="/cerca.html"><img src="img/cercalavoro.jpg"  width="180" height="59" /></a> &nbsp <a href="/post2ConCategoria.html"><img src="img/offrilavoro.jpg"  width="180" height="59" ></a>
             </div>
-            
-            <form action="/cercaCittaVicino" method="get">
-                 <button type="submit">Cerco Lavoro vicino a te</button>
-            </form>
            
             <div id="content">
             
                 
                 <div id="descrizione">
-                    <h1>Annunci Recenti</h1>
+                    <h1>Notifiche Recenti</h1>
                 </div>
                 
                 <div id="utility">
@@ -80,7 +76,6 @@
                 <p class="categoria"><b> <%= array[i][2] %> </b><class="luogo"><label>&nbsp&nbsp&nbsp&nbsp&nbspCittà :  <%= array[i][5] %></label> <label>(<%= array[i][6] %>)</label></p>
                 <p class="descrizione"> <%= array[i][1] %> </p>
             </div>
-            <% i++ %>
             <% } %>
         </div>
         </div>
