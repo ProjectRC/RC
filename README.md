@@ -6,6 +6,11 @@ Insert:
 
    access token and access token secret of Twitter in server.js
    
+   client id and client secret of Google in client.secret.json
+   
+   key of Google Maps in client/maps.html
+   
+   client id and client secret of MsTranslator in server.js
    
 
 
