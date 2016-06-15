@@ -1,3 +1,7 @@
+## First of all
+
+Insert your consumer key and consumer secret of Linkedin and twitter
+
 ## Running the server on Cloud9 IDE
 
 1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
