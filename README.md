@@ -1,6 +1,6 @@
 ## First of all
 
-Insert your consumer key and consumer secret of Linkedin and twitter
+Insert your consumer key and consumer secret of Linkedin and consumer key, consumer secret, access token, access token secret of Twitter
 
 ## Running the server on Cloud9 IDE
 
