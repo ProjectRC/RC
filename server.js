@@ -1105,8 +1105,8 @@ app.get('/cercaCitta', function(req, res){
 
 //var ap = location.split(" ");
 //var googleTranslate = require('google-translate')(apiKey);
-var keyTrans= 'rw57D79KesEoEiLoLXAbfdJjDOh0QizyGKrEiAA2hUw=',
-  IdTrans = '4378593a-e1e1-4e92-a495-60089cdfa67';
+var keyTrans= '',
+  IdTrans = '';
 
 var MsTranslator = require('mstranslator');
 // Second parameter to constructor (true) indicates that
