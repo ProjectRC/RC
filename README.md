@@ -2,7 +2,7 @@
 
 Insert:
 
-   consumer key and consumer secret of Linkedin and Twitter in 
+   consumer key and consumer secret of Linkedin and Twitter in Consumer_Keys.json
 
    access token and access token secret of Twitter in server.js
    
