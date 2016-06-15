@@ -1,6 +1,13 @@
 ## First of all
 
-Insert your consumer key and consumer secret of Linkedin and consumer key, consumer secret, access token, access token secret of Twitter
+Insert:
+
+   consumer key and consumer secret of Linkedin and Twitter in 
+
+   access token and access token secret of Twitter in server.js
+   
+   
+
 
 ## Running the server on Cloud9 IDE
 
