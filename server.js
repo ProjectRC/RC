@@ -12,10 +12,6 @@ var bodyParser = require('body-parser');
 
 var KEYS = require('./Consumer_Keys.json');
 
-//var readline = require('readline');
-//var google = require('googleapis');
-//var googleAuth = require('google-auth-library');
-
 var OAuth= require('oauth').OAuth;
 var redis = require('redis');
 var RedisStore = require('connect-redis')(session);
@@ -37,7 +33,6 @@ app.use(app.router);
 
 var password = "murobronzino";
 var global_email;
-//var amqp = require('amqplib/callback_api'); //RabbitMq
 var coda;
 var count = 0;
 var global_category;
@@ -78,9 +73,6 @@ for(i=0;i<5;i++) {
   array_altro[i] = new Array();
 }
 var amqp = require('amqp');
-//app.connectionStatus = 'No server connection';
-//app.exchangeStatus = 'No exchange established';
-//app.queueStatus = 'No queue established';
 
 var server = http.createServer(app);
 
@@ -111,10 +103,6 @@ app.get('/', function(req,res){
     
 });
 
-/*app.get('/', function(req, res){
-  app.rabbitMqConnection = amqp.createConnection({ host: 'localhost' });
-  console.log("Rabbitmq server connected");
-});*/
 
 //--------------- MESSAGE-US FACEBOOK---------------------------------------------
 /*Funziona solo con me per ora perchè non è pubblica.
@@ -1418,25 +1406,7 @@ server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
 
 
 
-// --------------------------------------------------------- RABBITMINQIU ------------------------------------------------------------------------------------------------------------------------------//
-/*function riempi_array(array,notifica) {
-  console.log(global_array);
-  var righe = 0;
-  var colonne = 0;
-  while(array[righe] == "") {
-    righe++;
-  }
-  global_array[righe][colonne] = "ciao";
-  console.log(global_array);
-  for(colonne;colonne<7;colonne++) {
-    var temp = notifica[colonne];
-    global_array[righe][colonne] = temp; 
-  }
-  colonne = 0;
-  for(colonne;colonne<7;colonne++) {
-    console.log("*"+global_array[righe][colonne]);
-  }
-}*/
+// --------------------------------------------------------- RABBITMQ ------------------------------------------------------------------------------------------------------------------------------//
 
 function notification(offerta) {
   /*amqp.connect('amqp://localhost', function(err, conn) {
@@ -1462,7 +1432,6 @@ function notification(offerta) {
 		connection.publish(queueToSendTo, messageToSend);
 		console.log("Sent message: "+ messageToSend);
 		count++;
-		//takeMessage(offerta,global_array,global_num);
 		if(offerta[2] == "Legislatori, Imprenditori e Alta Dirigenza") takeMessage_L(offerta,array_leg,num_leg);
 		else if(offerta[2] == "Professioni Intellettuali, Scientifiche e di elevata specializzazione") takeMessage_P(offerta,array_scie,num_scie);
 		else if(offerta[2] == "Professioni Tecniche") takeMessage_T(offerta,array_tec,num_tec);
@@ -1511,76 +1480,9 @@ app.get('/visualizzaAnnuncioConCategoria',function(req,res){
   		}
   		colonne++;
   	});        
-    //console.log("finito figlio"); //controllo
   });
-  //console.log("finito get");  //controllo
-  
-  //Iscrizione alla categoria effettuata. Il client si mette in attesa di notifiche
-  /*var connection = amqp.createConnection({host: 'localhost'});
-
-  var queueToReceiveFrom = global_category;
-  var message;
-  connection.on('ready', function(){
-		connection.queue(queueToReceiveFrom, {autoDelete: false}, function(queue){
-			queue.subscribe(function(messageReceived){
-				message = messageReceived;
-				console.log("**"+message);
-			});
-		});
-	});
-	*/
 });
 
-app.get('/visualizzaAnnuncioConCategoria2',function(req,res){
-  global_num = 0;
-  var matrice= new Array();
-  var i;
-  for(i=0;i<5;i++){
-    matrice[i]=new Array();
-  }
-  var colonne= 0;
-  var righe= 0;
-  myFirebaseRef.child('offerte')
-  .limitToLast(5)
-  .once('value', function(snap){
-  	snap.forEach(function(childsnap){
-  		childsnap.forEach(function(campi){
-  		  matrice[colonne][righe]= campi.val();
-  		  righe+=1;
-  		});
-  	
-  		righe=0;
-  		if(colonne==4){
-  		  //stampaMatrice(matrice);
-  		  res.render('visualizzaAnnuncioConCategoria',{name : name, surname : surname, Img : picture,
-  		                                  categoria1 : matrice[0][0] , citta1 : matrice[0][1], email1 : matrice[0][2] , provincia1 : matrice[0][3] , testo1 : matrice[0][4], titolo1 : matrice[0][5] , username1 : matrice[0][6],
-  		                                  categoria2 : matrice[1][0] , citta2 : matrice[1][1], email2 : matrice[1][2] , provincia2 : matrice[1][3] , testo2 : matrice[1][4], titolo2 : matrice[1][5] , username2 : matrice[1][6],  
-  		                                  categoria3 : matrice[2][0] , citta3 : matrice[2][1], email3 : matrice[2][2] , provincia3 : matrice[2][3] , testo3 : matrice[2][4], titolo3 : matrice[2][5] , username3 : matrice[2][6],
-  		                                  categoria4 : matrice[3][0] , citta4 : matrice[3][1], email4 : matrice[3][2] , provincia4 : matrice[3][3] , testo4 : matrice[3][4], titolo4 : matrice[3][5] , username4 : matrice[3][6],
-  		                                  categoria5 : matrice[4][0] , citta5 : matrice[4][1], email5 : matrice[4][2] , provincia5 : matrice[4][3] , testo5 : matrice[4][4], titolo5 : matrice[4][5] , username5 : matrice[4][6]
-  		  });
-  		}
-  		colonne++;
-  	});        
-    //console.log("finito figlio"); //controllo
-  });
-  //console.log("finito get");  //controllo
-  
-  //Iscrizione alla categoria effettuata. Il client si mette in attesa di notifiche
-  /*var connection = amqp.createConnection({host: 'localhost'});
-
-  var queueToReceiveFrom = global_category;
-  var message;
-  connection.on('ready', function(){
-		connection.queue(queueToReceiveFrom, {autoDelete: false}, function(queue){
-			queue.subscribe(function(messageReceived){
-				message = messageReceived;
-				console.log("**"+message);
-			});
-		});
-	});
-	*/
-});
 
 app.get('/visualizzaNotificaPerCategoria', function(req,res){
   if(global_category == "Legislatori, Imprenditori e Alta Dirigenza") {
@@ -1654,9 +1556,6 @@ app.get('/visualizzaNotificaPerCategoria', function(req,res){
     global_num = num_altro;
   }
   var connection = amqp.createConnection({host: 'localhost'});
-  //console.log(global_category);
-  //console.log(global_num);
-  //console.log(global_array);
   console.log("Received Message : " + global_array);
   var queueToReceiveFrom = global_category;
   connection.on('ready', function(){
@@ -1668,17 +1567,8 @@ app.get('/visualizzaNotificaPerCategoria', function(req,res){
 	});
 });
 
-/*function takeMessage(message,array,num) {
-  //var limit = 5;
-  var i;
-  for(i=0;i<7;i++) {
-    global_array[num][i] = message[i];
-  }
-  global_num++;
-}*/
 
 function takeMessage_L(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_leg[num][i] = message[i];
@@ -1687,7 +1577,6 @@ function takeMessage_L(message,array,num) {
 }
 
 function takeMessage_P(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_scie[num][i] = message[i];
@@ -1696,7 +1585,6 @@ function takeMessage_P(message,array,num) {
 }
 
 function takeMessage_T(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_tec[num][i] = message[i];
@@ -1705,7 +1593,6 @@ function takeMessage_T(message,array,num) {
 }
 
 function takeMessage_U(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_uff[num][i] = message[i];
@@ -1714,7 +1601,6 @@ function takeMessage_U(message,array,num) {
 }
 
 function takeMessage_S(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_comm[num][i] = message[i];
@@ -1723,7 +1609,6 @@ function takeMessage_S(message,array,num) {
 }
 
 function takeMessage_A(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_art[num][i] = message[i];
@@ -1732,7 +1617,6 @@ function takeMessage_A(message,array,num) {
 }
 
 function takeMessage_C(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_cond[num][i] = message[i];
@@ -1750,7 +1634,6 @@ function takeMessage_N(message,array,num) {
 }
 
 function takeMessage_F(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_forze[num][i] = message[i];
@@ -1759,7 +1642,6 @@ function takeMessage_F(message,array,num) {
 }
 
 function takeMessage_altro(message,array,num) {
-  //var limit = 5;
   var i;
   for(i=0;i<7;i++) {
     array_altro[num][i] = message[i];
@@ -1774,7 +1656,7 @@ app.post('/inserisciOffertaConCategoria', function(req, res) {			//inserimento o
     var titolo = req.body.titolo;
     var testo = req.body.testo;
     var categoria = req.body.categoria;
-    var nome = name + " " + surname; // ho cambiuato qui
+    var nome = name + " " + surname; 
     var email = req.body.email;
     var citta =req.body.citta;
     var provincia =req.body.provincia;
@@ -2024,71 +1906,5 @@ app.post('/api/cancella', function(req,res){
   };
   fireCanc.remove(onComplete);
 });
-/*
-app.post('/api/sottoscriviCategoria', function(req,res){
-  global_category = req.body.categoria;
-  var result = {
-    result : 'success',
-    category : global_category
-  };
-  res.json(result);
-});
-
-app.get('/api/visualizzaNotificaPerCategoria', function(req,res){
-  if(global_array[0].length == 0) {
-    res.render('noNotifiche', {categoria : global_array[2]});
-  }
-  var connection = amqp.createConnection({host: 'localhost'});
-  
-  var not_matrix = new Array(5);
-  var i;
-  for(i=0;i<5;i++) {
-    not_matrix[i] = new Array(7);
-  }
-  
-  var queueToReceiveFrom = global_category;
-  connection.on('ready', function(){
-		connection.queue(queueToReceiveFrom, {autoDelete: false}, function(queue){
-		  queue.subscribe(function(messageReceived){
-		    var result = {
-		      result : 'success',
-		      array : global_array,
-		      num : global_num,
-		      name : name,
-		      surname : surname
-		    };
-		    res.json(result);
-			});
-		});
-	});
-});
-
-app.post('/api/inserisciOffertaConCategoria', function(req, res) {			//inserimento offerta di lavoro
-
-    var titolo = req.body.titolo;
-    var testo = req.body.testo;
-    var categoria = req.body.categoria;
-    var nome = name + " " + surname; // ho cambiuato qui
-    var email = req.body.email;
-    var citta =req.body.citta;
-    var provincia =req.body.provincia;
-    
-    var off = new offerta(titolo, testo, categoria, nome, email, citta, provincia);
-    
-    var post_id = myFirebaseRef.child("offerte").push(off);
-    key = post_id.key();
-   
-    var notifica = new Array(titolo, testo, categoria, nome, email, citta, provincia);
-    notification(notifica);
-   
-    console.log("post received: %s %s %s %s %s %s %s",titolo, testo, categoria, nome, email, citta, provincia, post_id.key());
-    
-    var result = {
-			    result: 'success',
-		    	key: key,
-		    	offerta: off
-    };
-		res.json(result);
-});*/
 
 
