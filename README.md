@@ -2,15 +2,15 @@
 
 Insert:
 
-   consumer key and consumer secret of Linkedin and Twitter in Consumer_Keys.json
+   1) consumer key and consumer secret of Linkedin and Twitter in Consumer_Keys.json
 
-   access token and access token secret of Twitter in server.js
+   2) access token and access token secret of Twitter in server.js
    
-   client id and client secret of Google in client.secret.json
+   3) client id and client secret of Google in client.secret.json
    
-   key of Google Maps in client/maps.html
+   4) key of Google Maps in client/maps.html
    
-   client id and client secret of MsTranslator in server.js
+   5) client id and client secret of MsTranslator in server.js
    
 
 
