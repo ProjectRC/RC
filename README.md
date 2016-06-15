@@ -1,15 +1,4 @@
-
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
-
-
-Welcome to your Node.js project on Cloud9 IDE!
-
-## Running the server
+## Running the server on Cloud9 IDE
 
 1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
 
@@ -23,7 +12,7 @@ Welcome to your Node.js project on Cloud9 IDE!
 
 Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. 
 
-ALTERNATIVELY IN LOCAL:
+## Running the server in local
 
 1) Launc the app from the Terminal:
   
