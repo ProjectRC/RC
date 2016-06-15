@@ -9,8 +9,6 @@
 
 Welcome to your Node.js project on Cloud9 IDE!
 
-This chat example showcases how to use `socket.io` with a static `express` server.
-
 ## Running the server
 
 1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
@@ -19,4 +17,20 @@ This chat example showcases how to use `socket.io` with a static `express` serve
 
     $ node server.js
 
-Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+3) Launch rabbitmq server from the Terminal:
+ 
+   $ Invoke-rc.d rabbitmq-server start
+
+Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. 
+
+ALTERNATIVELY IN LOCAL:
+
+1) Launc the app from the Terminal:
+  
+  $ node server.js
+
+2) Launch rabbitmq server from the Terminal:
+ 
+   $ Invoke-rc.d rabbitmq-server start
+   
+ Once the server is running, open the project in the shape of 'https://localhost:3000/'. 
